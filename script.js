@@ -35,19 +35,17 @@ console.log("start");
 
 // 2-
 // function foo(x, y) {
-//   let aaaa = Math.floor(Math.random() * x) + y;
+//   let aaaa = Math.floor(Math.random() * (y - x + 1)) + x;
 //   console.log(aaaa);
 // }
 // foo(20, 70);
 
 // 3-
 // let gap = prompt("Gapni kiriting:");
-
 // function katta(str) {
-//   return str.charAt(0).toUpperCase() + str.slice(1);
+//   return str.split(" ") .map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 // }
 // let natija = katta(gap);
-
 // console.log(natija);
 
 // 4-
@@ -56,16 +54,21 @@ console.log("start");
 // function foo(str) {
 //   let unliy = "eaiouAEIOU";
 //   let count = 0;
+//   let katta = 0;
+
 //   for (let harf of str) {
 //     if (unliy.includes(harf)) {
 //       count++;
 //     }
+//     if (harf === harf.toUpperCase() && harf !== harf.toLowerCase()) {
+//       katta++;
+//     }
 //   }
 
-//   return count;
+//   return { unli: count, upperCase: katta };
 // }
-// let aaa = foo(gap);
-// console.log(`kirtgan (-${gap}-) gapingizda ${aaa} ta unli harf bor.`);
+// let result = foo(gap);
+// console.log(`Kiritgan (-${gap}-) gapingizda ${result.unli} ta unli harf va ${result.upperCase} ta katta harf bor.`);
 
 // ----------------------------------------------------------------
 // ----------------------------------------------------------------
